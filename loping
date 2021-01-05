@@ -1,0 +1,56 @@
+
+package pkg202069040005;
+import java.util.*;
+public class looping {
+       
+
+    public static void main(String[] args) {int total = 0; 
+  
+   Scanner input = new Scanner(System.in);
+   
+   int potongan1=5000; int potongan2=15000; int potongan3=50000; int diskon=0;
+  int harga_akhir = 0;
+System.out.println("Akhmad Aldi (202069040005)");
+System.out.println("---------------------------------------------------");
+ System.out.println("Potongan\n" +
+"1.Total belanja diatas Rp. 100.000 = 5.000 \n" +
+"2.Total belanja diatas Rp. 300.000 = 15.000\n" +
+"3.Total belanja diatas Rp. 500.000 = 50.000");
+ 
+ 
+ System.out.println("===================================================");
+ System.out.print("Masukan jumlah barang belanja : ");
+ int jumlah_barang = input.nextInt();
+
+    int x = 1;
+do {
+	System.out.print("harga barang ke "+x+" = ");
+        
+	 int harga = input.nextInt();
+        total = total+harga;
+	
+	x++;
+   }while (x <=jumlah_barang);
+
+System.out.println("=====================================================");
+System.out.println("total belanja anda                  = "+total);
+
+if (total>=500000){
+    diskon = potongan3;
+    System.out.println("potongan harga sebesar              = " +potongan3);
+}else if (total>=300000){
+    diskon = potongan2;
+    System.out.println("potongan harga sebesar              = " +potongan2);
+}else if(total>=100000){
+    diskon = potongan1;
+    System.out.println("potongan harga sebesar              = " +potongan1);
+}else if (total<=100000){
+    System.out.println("MAAF ANDA TIDAK MENDAPAT POTONGAN");
+}
+    {System.out.println("=====================================================");
+harga_akhir = total - diskon;
+System.out.println("total yang harus dibayar           = " +harga_akhir);
+}     
+}
+    
+    }
